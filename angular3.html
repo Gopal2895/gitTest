@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Calculation Application
+  </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+    </script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="calc" ng-init="firstNumber=2;secondNumber=3">
+  Enter First Number : <input type="number" ng-model="firstNumber"/>
+  Enter Second Number : <input type="number" ng-model="secondNumber"/>
+  Addition of two number : {{firstNumber + secondNumber}}
+</div>
+<script>
+var app = angular.module("myApp",[]);
+app.controller('calc',function($scope){
+  $scope.addition = $scope.firstNumber +$scope.secondNumber;
+});
+</script>
+</body>
+</html>

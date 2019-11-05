@@ -1,0 +1,31 @@
+<!-- This html page explains the directives and regular expression
+1. ng-app directivedefines the angular js application.
+Ex : In below code we have use ng-app inside div app this means div app is the owner
+of angular js app whatever we write outside div is not an angular application
+2. ng-model  directive binds the value of the input field to the application variable.
+Ex: In below code we have use ng-model="name" for text box.
+3.ng-bind directive binds the innerHTML to the application variable.
+Ex: in below code we have used ng-bind="name" inside <p> which means whatever
+we write down inside textbox it will show inside <p>
+4. ng-init directive is used to initiate variables used in angular application
+Ex: In below code we have inialized name and age variable
+5. {{variable name }} is used to print the variable anywhere inside angular app.
+--> 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    First Angular Page
+  </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+</head>
+<body >
+  <div ng-app="" ng-init="name='Gopal Prasad';age=25">
+  <p>Name: <input type="text" ng-model="name"/></p>
+  <p>Age: <input type="number" ng-model="age"/></p>
+  <p ng-bind="name"><span ng-bind="firstName"><p ng-bind="age"></p></p>
+    <p>Name is {{name}} and age is {{age + 2}}</p>
+</div>
+</body>
+</html>
