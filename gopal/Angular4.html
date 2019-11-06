@@ -1,0 +1,24 @@
+<!DOCTYPE  html>
+<html>
+<head>
+  <title>
+    Angular 4 Example
+  </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+  </script>
+</head>
+<body>
+  <div ng-app="myApp">
+    <div directive-test></div>
+  </div>
+  <script>
+var app=angular.module("myApp",[]);
+app.directive("directiveTest",function(){
+  return {
+    template : "<h1>This is headin written inside directive</h1>"
+  };
+});
+  </script>
+
+</body>
+</html>
